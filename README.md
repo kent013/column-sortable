@@ -6,8 +6,8 @@ Profile::sortable(['started_at' => 'desc'], 'profiles_')->get();
 ```
 
 ```blade
-@prefixedsortablelink('id', 'id', 'users_)
-@prefixedsortablelink('id', 'id', 'profiles_)
+@prefixedsortablelink('id', 'id', 'users_')
+@prefixedsortablelink('id', 'id', 'profiles_')
 ```
 
 will create
