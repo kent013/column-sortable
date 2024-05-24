@@ -1,3 +1,21 @@
+This fork is aim to use multiple tables in one view.
+
+```php
+User::sortable(['started_at' => 'desc'], 'users_')->get();
+Profile::sortable(['started_at' => 'desc'], 'profiles_')->get();
+```
+
+```blade
+@prefixedsortablelink('id', 'id', 'users_)
+@prefixedsortablelink('id', 'id', 'profiles_)
+```
+
+will create
+
+```
+?users_sort=id&users_direction=asc&profiles_sort=id&profiles_direction=asc
+```
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
